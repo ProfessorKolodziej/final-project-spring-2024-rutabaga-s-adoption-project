@@ -22,15 +22,11 @@ to help you out.
 	--size-xl: 1200px;
 */
 
-html {
+body {
 	font-family: "Single day";
 	/*font-family: "Literata";*/
+	background-image: url("../images/paw.png");
 }
 
 /* This uses the same value as --size-xs. */
-@media screen and (width >=320px) {
-	.content-container {
-		margin: 0 auto;
-		max-width: 768px;
-	}
-}
+@media screen and (width >=320px) {}
