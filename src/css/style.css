@@ -23,10 +23,143 @@ to help you out.
 */
 
 body {
-	font-family: "Single day";
-	/*font-family: "Literata";*/
+	font-family: "Single day", sans-serif;
+	font-size: 16px;
 	background-image: url("../images/paw.png");
+	/*font-family: "Literata";*/
 }
 
+
 /* This uses the same value as --size-xs. */
-@media screen and (width >=320px) {}
+@media screen and (width >=375px) {
+	.start-page {
+		font-family: "Literata", serif;
+		font-size: 1em;
+		color: #1B4267;
+		text-align: center;
+		max-width: 90%;
+		margin-left: 20%;
+		margin-right: 20%;
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			border-color: #1B4267;
+			border-width: 1em;
+			position: absolute;
+			z-index: -1;
+			border-radius: 0.75em;
+			max-width: 100%;
+			margin-left: -50%;
+			margin-top: 10%;
+		}
+	}
+
+	.start-header {
+		background-image: url("../images/banner.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0%;
+		color: white;
+		font-family: "Single day", sans-serif;
+		font-size: 2em;
+	}
+
+	.quiz-length {
+		font-size: 0.5em;
+		font-weight: 800;
+		margin: 0;
+	}
+
+	.start-button {
+		border-radius: 1em;
+		color: white;
+		background-color: #EA5A2D;
+		font-family: "Single day", sans-serif;
+		font-size: 1.5em;
+		max-width: 65%;
+		padding: 0.15em;
+		border: 0;
+
+	}
+
+	.question-text {
+		color: white;
+		background-image: url("../images/text-box.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0%;
+		width: 100%;
+		max-height: 100%;
+		max-width: 33%;
+		margin-left: 35%;
+		margin-top: 10%;
+	}
+
+	.lifestyle-question,
+	.job-type-question,
+	.loud-type-question,
+	.quiet-hair-type-question,
+	.loud-hair-type-question,
+	.size-question {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1em;
+		max-height: max-content;
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			position: absolute;
+			z-index: -1;
+			border-radius: 0.75em;
+			max-width: 65%;
+			margin-top: 15%;
+			margin-left: 15%;
+		}
+	}
+
+	.thirty-percent-progress,
+	.sixty-percent-progress,
+	.ninety-percent-progress {
+		text-align: center;
+		font-family: "Literata", serif;
+		color: #1B4267;
+	}
+
+	.question-button {
+		border-radius: 1em;
+		color: white;
+		background-color: #EA5A2D;
+		font-family: "Single day", sans-serif;
+		font-size: 1.5em;
+		max-width: 45%;
+		position: relative;
+		padding: 0.15em;
+		margin: 0.5em;
+		border: 0;
+		margin-left: 30%;
+
+	}
+
+	.rutabaga {
+		max-width: 20%;
+		max-height: 50%;
+	}
+
+	.dog-result-pic {
+		max-width: 20%;
+		max-height: 50%;
+	}
+
+	.adoption-certificate-pic {
+		max-width: 20%;
+		max-height: 50%;
+	}
+}
