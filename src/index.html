@@ -21,247 +21,328 @@
 </head>
 
 <body>
-	<script src="js/scripts.js"></script>
-
-	<section class="start-page">
-		<h1 class="start-header">Welcome to Rutabaga's Adoption Project!</h1>
-		<p>Get matched with your perfect puppy from Rutabaga the cat’s special inventory of 10!</p>
-		<div class="accent-rectangle"></div>
-		<img class="rutabaga" src="/images/Rutabaga1.png">
-		<p class="quiz-length">quiz-length 1-3 minutes</p>
-		<button class="start-button">Start Quiz</button>
+	<section id="start-page" class="rap-section show">
+		<h1 class="start-end-header">Welcome to Rutabaga's Adoption Project!</h1>
+		<div>
+			<p class="intro-paragraph">Get matched with your perfect puppy from Rutabaga the cat’s special inventory of 10!
+			</p>
+			<div class="accent-rectangle"></div>
+			<img class="rutabaga" src="/images/Rutabaga1.png">
+			<p class="quiz-length">quiz-length 1-3 minutes</p>
+			<button id="js-start" class="start-end-button">Start Quiz</button>
+		</div>
 	</section>
 
-	<section class="lifestyle-question">
+	<section id="lifestyle-question" class="question show">
 		<h1 class="question-text">1. What is the ideal lifestyle for your dog?</h1>
 		<img class="rutabaga" src="/images/Rutabaga2.png">
-		<button class="question-button">They gaurd or herd</button>
-		<button class="question-button">They are active and full of energy</button>
-		<button class="question-button">They are low-energy and love to lounge</button>
-		<p class="thirty-percent-progress">30% complete</p>
-		<img class="thirty-percent-progress" src="/images/30%.png">
+		<div class="q-buttons">
+			<button id="guard-herd-button" class="question-button">They gaurd or herd</button>
+			<button id="active-button" class="question-button">They are active and full of energy</button>
+			<button id="lounge-button" class="question-button">They are low-energy and love to lounge</button>
+		</div>
+		<div class="flex-progress-bar">
+			<p class="q-progress-bar">30% complete</p>
+			<img class="percent-pic" src="/images/thirty.png">
+		</div>
 	</section>
 
-	<section class="job-type-question">
+	<section id="job-type-question" class="question show">
 		<h1 class="question-text">2. What job type?</h1>
 		<img class="rutabaga" src="/images/Rutabaga3.png">
-		<button class="question-button">Guarding</button>
-		<button class="question-button">Herding</button>
-		<p class="ninety-percent-progress">90% complete</p>
+		<div class="q-buttons">
+			<button id="gaurding-button" class="question-button">Guarding</button>
+			<button id="herding-button" class="question-button">Herding</button>
+		</div>
+		<div class="flex-progress-bar">
+			<p class="q-progress-bar">90% complete</p>
+			<img class="percent-pic" src="/images/ninety.png">
+		</div>
 	</section>
 
-	<section class="loud-type-question">
+	<section id="loud-type-question" class="question show">
 		<h1 class="question-text">2. How loud do you mind them?</h1>
 		<img class="rutabaga" src="/images/Rutabaga2.png">
-		<button class="question-button">I don't mind loudness</button>
-		<button class="question-button">I would prefer if they were more quiet</button>
-		<p class="sixty-percent-progress">60% complete</p>
+		<div class="q-buttons">
+			<button id="loud-button" class="question-button">I don't mind loudness</button>
+			<button id="quiet-button" class="question-button">I would prefer if they were more quiet</button>
+		</div>
+		<div class="flex-progress-bar">
+			<p class="q-progress-bar">60% complete</p>
+			<img class="percent-pic" src="/images/sixty.png">
+		</div>
 	</section>
 
-	<section class="quiet-hair-type-question">
+	<section id="quiet-hair-type-question" class="question show">
 		<h1 class="question-text">3. What hair-type would you prefer?</h1>
 		<img class="rutabaga" src="/images/Rutabaga3.png">
-		<button class="question-button">Short-coat</button>
-		<button class="question-button">Hypoallergenic</button>
-		<p class="ninety-percent-progress">90% complete</p>
+		<div class="q-buttons">
+			<button id="quiet-short-coat-button" class="question-button">Short-coat</button>
+			<button id="hypoallergenic-button" class="question-button">Hypoallergenic</button>
+		</div>
+		<div class="flex-progress-bar">
+			<p class="q-progress-bar">90% complete</p>
+			<img class="percent-pic" src="/images/ninety.png">
+		</div>
 	</section>
 
-	<section class="loud-hair-type-question">
+	<section id="loud-hair-type-question" class="question show">
 		<h1 class="question-text">3. What hair-type would you prefer?</h1>
 		<img class="rutabaga" src="/images/Rutabaga3.png">
-		<button class="question-button">fluffy</button>
-		<button class="question-button">Short-coat</button>
-		<p class="ninety-percent-progress">90% complete</p>
+		<div class="q-buttons">
+			<button id="fluffy-button" class="question-button">fluffy</button>
+			<button id="loud-short-coat-button" class="question-button">Short-coat</button>
+		</div>
+		<div class="flex-progress-bar">
+			<p class="q-progress-bar">90% complete</p>
+			<img class="percent-pic" src="/images/ninety.png">
+		</div>
 	</section>
 
-	<section class="size-question">
+	<section id="size-question" class="question show">
 		<h1 class="question-text">3. What size would you prefer them to be?</h1>
 		<img class="rutabaga" src="/images/Rutabaga2.png">
-		<button class="question-button">Extra-Large</button>
-		<button class="question-button">Medium-sized</button>
-		<button class="question-button">Extra-small</button>
-		<p class="sixty-percent-progress">60% complete</p>
+		<div class="q-buttons">
+			<button id="extra-large-button" class="question-button">Extra-Large</button>
+			<button id="medium-button" class="question-button">Medium-sized</button>
+			<button id="extra-small-button" class="question-button">Extra-small</button>
+		</div>
+		<div class="flex-progress-bar">
+			<p class="q-progress-bar">60% complete</p>
+			<img class="percent-pic" src="/images/sixty.png">
+		</div>
 	</section>
 
-	<section class="great-pyrenese-result">
-		<h1>You got Button the Great Pyrenese!</h1>
+	<section id="great-pyrenese-result" class="result show">
+		<h1 class="result-heading">You got Button the Great Pyrenese!</h1>
 		<img class="dog-result-pic" src="/images/greatpyrenese.png">
-		<ul>
-			<li>Amazing guard</li>
-		</ul>
-		<p>Don't be intimidated by his looks, button is the most
-			gentle buddy at Rutabaga's home, but he has a strong howl
-			to keep your house or farm safe!
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Amazing guard</li>
+			</ul>
+			<p>Don't be intimidated by his looks, button is the most
+				gentle buddy at Rutabaga's home, but he has a strong howl
+				to keep your house or farm safe!
+			</p>
+		</div>
+		<button id="retake-one" class="retake-button">Retake Quiz</button>
+		<button id="adopt-one" class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="border-collie-result">
-		<h1>You got Juniper the Border Collie!</h1>
+	<section id="border-collie-result" class="result show">
+		<h1 class="result-heading">You got Juniper the Border Collie!</h1>
 		<img class="dog-result-pic" src="/images/bordercollie.png">
-		<ul>
-			<li>10/10 herder</li>
-		</ul>
-		<p>Juniper is the best manager in town. Her skills ensure no
-			livestock wanders too far, keeping your farm safe and orderly.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>10/10 herder</li>
+			</ul>
+			<p>Juniper is the best manager in town. Her skills ensure no
+				livestock wanders too far, keeping your farm safe and orderly.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="husky-result">
-		<h1>You got Sunny the Husky!</h1>
+	<section id="husky-result" class="result show">
+		<h1 class="result-heading">You got Sunny the Husky!</h1>
 		<img class="dog-result-pic" src="/images/husky.png">
-		<ul>
-			<li>Very active</li>
-			<li>Loves to talk (is loud)</li>
-			<li>Oh-so fluffy</li>
-		</ul>
-		<p>You won't find a buddy more upbeat than Sunny. She needs
-			at least one walk a day, and someone with incredible arm strength
-			to withstand her sled-pulling genes... Besides that, she's a great singer
-			and will bring joy to your days.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Very active</li>
+				<li>Loves to talk (is loud)</li>
+				<li>Oh-so fluffy</li>
+			</ul>
+			<p>You won't find a buddy more upbeat than Sunny. She needs
+				at least one walk a day, and someone with incredible arm strength
+				to withstand her sled-pulling genes... Besides that, she's a great singer
+				and will bring joy to your days.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="beagle-result">
-		<h1>You got Thunder the Beagle!</h1>
-		<img class="dog-result-pic" src="/src/images/beagle.png">
-		<ul>
-			<li>Very active</li>
-			<li>Loves to talk (is loud)</li>
-			<li>minimal shedding from his short coat</li>
-		</ul>
-		<p>Thunder, named appropriately for his strong bark, is a great finder.
-			With an amazing nose, he can find or track almost anything you may lose.
-			Furthermore, he's a great walk buddy that will definitely match your step.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+	<section id="beagle-result" class="result show">
+		<h1 class="result-heading">You got Thunder the Beagle!</h1>
+		<img class="dog-result-pic" src="/images/beagle.png">
+		<div class="result-description">
+			<ul>
+				<li>Very active</li>
+				<li>Loves to talk (is loud)</li>
+				<li>minimal shedding from his short coat</li>
+			</ul>
+			<p>Thunder, named appropriately for his strong bark, is a great finder.
+				With an amazing nose, he can find or track almost anything you may lose.
+				Furthermore, he's a great walk buddy that will definitely match your step.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="poodle-result">
-		<h1>You got Noodle the Poodle!</h1>
+	<section id="poodle-result" class="result show">
+		<h1 class="result-heading">You got Noodle the Poodle!</h1>
 		<img class="dog-result-pic" src="/images/poodle.png">
-		<ul>
-			<li>Very active</li>
-			<li>Loves to talk (is loud)</li>
-			<li>Perfect coat for people with allergies</li>
-		</ul>
-		<p>Noodle is a stylish fellow. He also loves to be dressed-up
-			and customized whether it be his hair-style or outfit. Explore
-			your creative style with Noodle!
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Very active</li>
+				<li>Loves to talk (is loud)</li>
+				<li>Perfect for people with allergies</li>
+			</ul>
+			<p>Noodle is a stylish fellow. He also loves to be dressed-up
+				and customized whether it be his hair-style or outfit. Explore
+				your creative style with Noodle!
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="labrador-retriever-result">
-		<h1>You got Luna the Labrador Retriever!</h1>
+	<section id="labrador-retriever-result" class="result show">
+		<h1 class="result-heading">You got Luna the Labrador Retriever!</h1>
 		<img class="dog-result-pic" src="/images/lab.png">
-		<ul>
-			<li>Very active</li>
-			<li>Loves to talk (is loud)</li>
-			<li>Short-coat with minimal shedding</li>
-		</ul>
-		<p>Luna is the best swimmer at Rutabaga's home. Honestly there's
-			an ongoing conspurancy that she's actually part duck... Either way,
-			she'll make for a good buddy to exercise with or to play fetch.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Very active</li>
+				<li>Loves to talk (is loud)</li>
+				<li>Short-coat with minimal shedding</li>
+			</ul>
+			<p>Luna is the best swimmer at Rutabaga's home. Honestly there's
+				an ongoing conspurancy that she's actually part duck... Either way,
+				she'll make for a good buddy to exercise with or to play fetch.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="shih-tzu-result">
-		<h1>You got Tuna the Shih-Tzu!</h1>
+	<section id="shih-tzu-result" class="result show">
+		<h1 class="result-heading">You got Tuna the Shih-Tzu!</h1>
 		<img class="dog-result-pic" src="/images/shihtzu.png">
-		<ul>
-			<li>Fantastic lounger</li>
-			<li>Calm and quiet</li>
-		</ul>
-		<p>Tuna is the perfect buddy to hang at home with. His favorite show
-			is the Real Housewives of Atlanta, and loves to dish out the latest gossip.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Fantastic lounger</li>
+				<li>Calm and quiet</li>
+			</ul>
+			<p>Tuna is the perfect buddy to hang at home with. His favorite show
+				is the Real Housewives of Atlanta, and loves to dish out the latest gossip.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="chihuaha-result">
-		<h1>You got Caramel the Chihuaha!</h1>
+	<section id="chihuaha-result" class="result show">
+		<h1 class="result-heading">You got Caramel the Chihuaha!</h1>
 		<img class="dog-result-pic" src="/images/chihuahua.png">
-		<ul>
-			<li>Fantastic lounger</li>
-			<li>Loves to talk (is loud)</li>
-			<li>Extra-small</li>
-		</ul>
-		<p>Don't underestimate his size, Caramel has a big personality.
-			He has an opinion on everything and loves to debate. It tires him
-			enough to snuggle for the rest of the night.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Fantastic lounger</li>
+				<li>Loves to talk (is loud)</li>
+				<li>Extra-small</li>
+			</ul>
+			<p>Don't underestimate his size, Caramel has a big personality.
+				He has an opinion on everything and loves to debate. It tires him
+				enough to snuggle for the rest of the night.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="basset-hound-result">
-		<h1>You got Bee the Basset Hound!</h1>
+	<section id="basset-hound-result" class="result show">
+		<h1 class="result-heading">You got Bee the Basset Hound!</h1>
 		<img class="dog-result-pic" src="/images/bassethound.png">
-		<ul>
-			<li>Fantastic lounger</li>
-			<li>Loves to talk (is loud)</li>
-			<li>medium-sized</li>
-		</ul>
-		<p>Bee is sweet and lazy. She won't get up without incentives
-			like a snack or a car ride. This means she's the perfect nap
-			partner, she'll keep you company and sound her howling alarm if there's an issue.
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Fantastic lounger</li>
+				<li>Loves to talk (is loud)</li>
+				<li>medium-sized</li>
+			</ul>
+			<p>Bee is sweet and lazy. She won't get up without incentives
+				like a snack or a car ride. This means she's the perfect nap
+				partner, she'll keep you company and sound her howling alarm if there's an issue.
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="great-dane-result">
-		<h1>You got Charlie the Great Dane!</h1>
+	<section id="great-dane-result" class="result show">
+		<h1 class="result-heading">You got Charlie the Great Dane!</h1>
 		<img class="dog-result-pic" src="/images/greatdane.png">
-		<ul>
-			<li>Fantastic lounger</li>
-			<li>Loves to talk (is loud)</li>
-			<li>extra-large sized</li>
-		</ul>
-		<p>Charlie is the tallest at Rutabaga’s home, and is of course
-			in charge of reaching the tall shelves. He's kinda clumsy though,
-			so best to not give him too many responsibilities
-		</p>
-		<button>Retake Quiz</button>
-		<button>Adopt</button>
-		<p>100% complete!</p>
+		<div class="result-description">
+			<ul>
+				<li>Fantastic lounger</li>
+				<li>Loves to talk (is loud)</li>
+				<li>extra-large sized</li>
+			</ul>
+			<p>Charlie is the tallest at Rutabaga’s home, and is of course
+				in charge of reaching the tall shelves. He's kinda clumsy though,
+				so best to not give him too many responsibilities
+			</p>
+		</div>
+		<button class="retake-button">Retake Quiz</button>
+		<button class="adopt-button">Adopt</button>
+		<div class="progress-bar">
+			<p class="hundred-percent-progress">100% complete!</p>
+			<img class="percent-pic" src="/images/hundred.png">
+		</div>
 	</section>
 
-	<section class="certificate-prep">
-		<h1>Rutabaga is preparing your adoption certificate now</h1>
-		<p>By writing your name on the line below, you agree to wholeheartedly
+	<section id="certificate-prep" class="rap-section show">
+		<h1 class="prep-heading">Rutabaga is preparing your adoption certificate now</h1>
+		<p class="prep-text">By writing your name on the line below, you agree to wholeheartedly
 			love and care for your new buddy.
 		</p>
-		<input type="text">
-		<p>(please type your name here)</p>
-		<button>I'm ready for my certificate!</button>
+		<input class="input-text" type="text">
+		<p class="prep-text">(please type your name here)</p>
+		<button id="certificate-button" class="start-end-button">I'm ready for my certificate!</button>
 	</section>
 
-	<section class="certificate">
-		<img class="adoption-certificate-pic" src="/images/adoption certificate.png">
-		<button>Download a png of certificate</button>
+	<section id="certificate" class="rap-section show">
+		<h1 class="start-end-header">Congratulations! You've adopted your new buddy.</h1>
+		<img class="adoption-certificate-pic" src="/images/adoption.png">
+		<button class="download-button">Download a png of certificate</button>
 	</section>
-
+	<script src="js/scripts.js"></script>
 </body>
 
 

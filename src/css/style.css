@@ -32,33 +32,34 @@ body {
 
 /* This uses the same value as --size-xs. */
 @media screen and (width >=375px) {
-	.start-page {
+	#start-page {
 		font-family: "Literata", serif;
-		font-size: 1em;
 		color: #1B4267;
 		text-align: center;
-		max-width: 90%;
-		margin-left: 20%;
-		margin-right: 20%;
 		position: relative;
+		display: none;
+		flex-direction: column;
+		align-items: center;
 
 		&::before {
 			content: "";
-			width: 100%;
+			width: 80%;
 			height: 100%;
 			background-color: white;
-			border-color: #1B4267;
-			border-width: 1em;
 			position: absolute;
 			z-index: -1;
 			border-radius: 0.75em;
 			max-width: 100%;
-			margin-left: -50%;
-			margin-top: 10%;
+			margin-top: 3em;
+			border: solid 8px #004289;
+		}
+
+		&.show {
+			display: flex;
 		}
 	}
 
-	.start-header {
+	.start-end-header {
 		background-image: url("../images/banner.png");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -66,100 +67,471 @@ body {
 		color: white;
 		font-family: "Single day", sans-serif;
 		font-size: 2em;
+		max-width: 22ch;
+		max-height: 80px;
+		position: relative;
+
+	}
+
+	.intro-paragraph {
+		max-width: 25ch;
+		margin: 0 auto;
+		margin-bottom: 1.5em;
+
+	}
+
+	.accent-rectangle {
+		height: 0.3em;
+		width: 6em;
+		background-color: #EA5A2D;
+		margin: 0 auto;
 	}
 
 	.quiz-length {
-		font-size: 0.5em;
 		font-weight: 800;
-		margin: 0;
 	}
 
-	.start-button {
+	.start-end-button {
 		border-radius: 1em;
 		color: white;
 		background-color: #EA5A2D;
 		font-family: "Single day", sans-serif;
-		font-size: 1.5em;
-		max-width: 65%;
+		font-size: 2em;
+		max-width: 70%;
 		padding: 0.15em;
 		border: 0;
 
 	}
 
-	.question-text {
-		color: white;
-		background-image: url("../images/text-box.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 0%;
-		width: 100%;
-		max-height: 100%;
-		max-width: 33%;
-		margin-left: 35%;
-		margin-top: 10%;
-	}
 
-	.lifestyle-question,
-	.job-type-question,
-	.loud-type-question,
-	.quiet-hair-type-question,
-	.loud-hair-type-question,
-	.size-question {
+	.question {
 		position: relative;
-		display: flex;
+		display: none;
 		flex-direction: column;
-		margin-bottom: 1em;
-		max-height: max-content;
+		margin: 0 auto;
+		align-items: center;
+
 
 		&::before {
 			content: "";
-			width: 100%;
-			height: 100%;
+			width: 80%;
+			height: 85%;
 			background-color: white;
 			position: absolute;
 			z-index: -1;
 			border-radius: 0.75em;
-			max-width: 65%;
-			margin-top: 15%;
-			margin-left: 15%;
+			max-width: 100%;
+			border: solid 8px #004289;
+			margin-top: 10em;
+		}
+
+
+		&.show {
+			display: flex;
 		}
 	}
 
-	.thirty-percent-progress,
-	.sixty-percent-progress,
-	.ninety-percent-progress {
+	.question-text {
+		color: white;
+		background-color: #EA5A2D;
+		width: 100%;
+		position: relative;
+		padding: 1vw;
+		border-radius: 2vw;
+		font-size: 2em;
+		max-width: 22ch;
+		margin-top: 4em;
+
+
+		&::before {
+			content: "";
+			height: 0;
+			border-left: 5vw solid transparent;
+			border-right: 5vw solid transparent;
+			border-top: 5vw solid #EA5A2D;
+			position: absolute;
+			top: 100%;
+			left: 40%;
+		}
+	}
+
+	.q-buttons {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.q-progress-bar {
 		text-align: center;
 		font-family: "Literata", serif;
 		color: #1B4267;
+		font-size: 1.5em;
+		margin-bottom: 0;
 	}
 
+
 	.question-button {
-		border-radius: 1em;
+		border-radius: 15vw;
 		color: white;
-		background-color: #EA5A2D;
+		background-color: #1B4267;
 		font-family: "Single day", sans-serif;
-		font-size: 1.5em;
-		max-width: 45%;
-		position: relative;
-		padding: 0.15em;
-		margin: 0.5em;
+		margin: 1vw;
 		border: 0;
-		margin-left: 30%;
+		padding: 2vw 2vw 2vw 2vw;
+		font-size: 1.5em;
+		display: flex;
+		font-family: "literata", serif;
+		max-width: 20ch;
 
 	}
 
 	.rutabaga {
-		max-width: 20%;
-		max-height: 50%;
+		max-width: 10em;
+		margin: 2em;
 	}
 
-	.dog-result-pic {
-		max-width: 20%;
-		max-height: 50%;
-	}
+
 
 	.adoption-certificate-pic {
 		max-width: 20%;
 		max-height: 50%;
+	}
+
+	.percent-pic {
+		max-width: 20em;
+		position: relative;
+	}
+
+
+	.result {
+		font-family: "Literata", serif;
+		font-size: 1em;
+		color: #1B4267;
+		text-align: center;
+		position: relative;
+		display: none;
+		grid-template-columns: repeat(2, 1fr);
+		position: relative;
+		justify-items: center;
+
+		&::before {
+			content: "";
+			width: 80%;
+			height: 85%;
+			background-color: white;
+			position: absolute;
+			z-index: -1;
+			border-radius: 0.75em;
+			max-width: 100%;
+			border: solid 8px #004289;
+			margin-top: 10em;
+		}
+
+		&.show {
+			display: grid;
+		}
+	}
+
+	.result-heading {
+		background-image: url("../images/banner.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0%;
+		color: white;
+		font-family: "Single day", sans-serif;
+		font-size: 2em;
+		max-width: 18ch;
+		margin-top: 4.5em;
+		grid-column: 1/span 3;
+		padding: 0.2em;
+	}
+
+
+
+	.dog-result-pic {
+		max-width: 10em;
+		grid-column: 1/ span 1;
+		grid-row: 2/ span 1;
+	}
+
+	.result-description {
+		font-size: 1em;
+		text-align: start;
+		margin-bottom: 20px;
+		max-width: 20ch;
+		justify-self: start;
+		grid-row: 2/ span 2;
+	}
+
+	.retake-button {
+		grid-row: 4/span 1;
+		grid-column: 1/span 2;
+		border-radius: 15vw;
+		color: white;
+		background-color: #1B4267;
+		font-family: "Single day", sans-serif;
+		margin: 1vw;
+		border: 0;
+		padding: 2vw 2vw 2vw 2vw;
+		font-size: 1em;
+		font-family: "literata", serif;
+		max-width: 80%;
+		justify-content: end;
+		margin-right: 10em;
+	}
+
+	.adopt-button {
+		grid-row: 4/span 1;
+		grid-column: 1/span 2;
+		border-radius: 15vw;
+		color: white;
+		background-color: #1B4267;
+		font-family: "Single day", sans-serif;
+		margin: 1vw;
+		border: 0;
+		padding: 2vw 2vw 2vw 2vw;
+		font-size: 1em;
+		font-family: "literata", serif;
+		max-width: 50%;
+		justify-content: start;
+		margin-left: 10em;
+	}
+
+	.progress-bar {
+		grid-row: 5/span 1;
+		grid-column: 1/span 2;
+	}
+
+
+	#certificate-prep {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+
+		&::before {
+			content: "";
+			width: 80%;
+			height: 85%;
+			background-color: white;
+			position: absolute;
+			z-index: -1;
+			border-radius: 0.75em;
+			max-width: 100%;
+			border: solid 8px #004289;
+			margin-top: 10em;
+		}
+
+		&.show {
+			display: flex;
+		}
+	}
+
+	.prep-heading {
+		color: #004289;
+		margin-top: 6em;
+		text-align: center;
+		max-width: 22ch;
+		font-size: 2em;
+	}
+
+	.prep-text {
+		font-family: "Literata", serif;
+		font-size: 1em;
+		max-width: 35ch;
+		text-align: center;
+		margin-bottom: 3em;
+	}
+
+	input[type=text] {
+		border: none;
+		border-bottom: 2px solid #004289;
+		background-color: #f5c6b7;
+		color: #004289;
+	}
+
+	#certificate {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		background-color: #5FBBFF;
+		position: relative;
+
+		&.show {
+			display: flex;
+		}
+	}
+
+	.adoption-certificate-pic {
+		max-width: 25em;
+	}
+
+	.download-button {
+		border-radius: 15vw;
+		color: white;
+		background-color: #1B4267;
+		font-family: "Single day", sans-serif;
+		margin: 1vw;
+		border: 0;
+		padding: 2vw 2vw 2vw 2vw;
+		font-size: 1em;
+		display: flex;
+		font-family: "literata", serif;
+		max-width: 20ch;
+	}
+}
+
+@media screen and (width >=768px) {
+
+	.dog-result-pic {
+		grid-column: 1/span 2;
+	}
+
+	.result-description {
+		grid-row: 3/span 1;
+		grid-column: 1/span 3;
+		text-align: center;
+		justify-self: center;
+		max-width: 60ch;
+	}
+
+	#great-pyrenese-result ul,
+	#border-collie-result ul {
+		margin-left: 35%;
+	}
+
+	#shih-tzu-result ul {
+		margin-left: 12%;
+	}
+
+	ul {
+		display: flex;
+		list-style-position: inside;
+		padding: 0;
+		margin: 0 auto;
+
+	}
+
+	li {
+		min-width: 11ch;
+		margin: 5px;
+	}
+
+	.retake-button {
+		grid-column: 1/span 2;
+		grid-row: 4/span 1;
+		margin-right: 10em;
+	}
+
+	.adopt-button {
+		grid-column: 1/ span 2;
+		grid-row: 4/span 1;
+		margin-left: 10em;
+	}
+
+	.progress-bar {
+		grid-row: 5/span 1;
+	}
+}
+
+@media screen and (width >=1024px) {
+
+	.question {
+		position: relative;
+		grid-template-columns: repeat(2, 1fr);
+		position: relative;
+		justify-items: center;
+
+
+		&.show {
+			display: grid;
+		}
+	}
+
+	.question-text {
+		grid-column: 1/ span 1;
+		margin-left: 2em;
+
+
+		&::before {
+			content: "";
+			height: 0;
+			border-left: 5vw solid transparent;
+			border-right: 5vw solid transparent;
+			border-top: 5vw solid #EA5A2D;
+			position: absolute;
+			top: 100%;
+			left: 25%;
+		}
+	}
+
+	.rutabaga {
+		grid-column: 1/span 1;
+		grid-row: 2/ span 1;
+
+	}
+
+	.q-buttons {
+		grid-row: 1/ span 4;
+		margin-top: 10em;
+	}
+
+	.question-button {
+		position: relative;
+	}
+
+	.flex-progress-bar {
+		grid-column: 1/ span 4;
+	}
+
+	.result-heading {
+		font-size: 3em;
+		margin-top: 3em;
+	}
+
+	.dog-result-pic {
+		grid-column: 1/span 1;
+		margin-bottom: 3em;
+		max-width: 12em;
+	}
+
+	.result-description {
+		grid-row: 2/span 1;
+		grid-column: 2/span 1;
+		text-align: start;
+		justify-self: start;
+		max-width: 30ch;
+
+	}
+
+	#great-pyrenese-result ul,
+	#border-collie-result ul {
+		margin-left: 0;
+
+		ul {
+			flex-direction: column;
+			text-align: start;
+			list-style-position: outside;
+		}
+
+		li {
+			min-width: 11ch;
+			margin: 5px;
+		}
+
+		.retake-button {
+			grid-row: 3/span 1;
+		}
+
+		.adopt-button {
+			grid-row: 3/span 1;
+		}
+
+		.progress-bar {
+			grid-row: 4/span 1;
+		}
+
 	}
 }
