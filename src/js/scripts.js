@@ -6,6 +6,10 @@
 // - Run npm run test regularly to check autograding
 // - You'll need to link this file to your HTML :)
 
+let dogName = "";
+const d = new Date();
+let niceDate = d.getDate();
+
 //all buttons before final certificate
 const startBtn = document.querySelector("#js-start");
 const gaurdOrHerdBtn = document.querySelector("#guard-herd-button");
@@ -72,6 +76,8 @@ function toGuardResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Button"
 }
 
 function toHerdResult() {
@@ -80,6 +86,8 @@ function toHerdResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Juniper";
 }
 
 function toActiveLoudQ() {
@@ -128,6 +136,8 @@ function toLoungeQuietResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Tuna";
 }
 
 function toQShortCoatResult() {
@@ -136,6 +146,8 @@ function toQShortCoatResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Luna";
 }
 
 function toHypoallergenicResult() {
@@ -144,6 +156,8 @@ function toHypoallergenicResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Noodle";
 }
 
 function toFluffyResult() {
@@ -152,6 +166,8 @@ function toFluffyResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Sunny";
 }
 
 function toLShortCoatResult() {
@@ -160,6 +176,8 @@ function toLShortCoatResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Thunder";
 }
 
 function toXLResult() {
@@ -168,6 +186,8 @@ function toXLResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Charlie";
 }
 
 function toMediumResult() {
@@ -176,6 +196,8 @@ function toMediumResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Bee";
 }
 
 function toXSResult() {
@@ -184,6 +206,8 @@ function toXSResult() {
 
 	thisSection.classList.toggle('show');
 	nextSection.classList.toggle('show');
+
+	dogName = "Caramel";
 }
 
 //all button event listeners for the quiz itself//
@@ -208,7 +232,7 @@ mediumBtn.addEventListener("click", toMediumResult);
 xSBtn.addEventListener("click", toXSResult);
 
 
-
+//result-options
 function toStartCertificate() {
 	const thisSection = this.closest('.rap-section');
 	const nextSection = document.querySelector('#certificate-prep');
@@ -251,21 +275,35 @@ retakeGD.addEventListener("click", retakeQuiz);
 
 
 
+//customizing certificate
 
-
-
-
-
-
-
-
-
+let userName = "";
 const certificateBtn = document.querySelector("#certificate-button");
-console.log(certificateBtn);
 
 function customizeCertificate() {
 	const inputBtn = document.querySelector(".input-text");
-	console.log(inputBtn);
-	console.log(inputBtn.value);
+	userName = inputBtn.value;
 }
+
+function toCertificate() {
+	const thisSection = this.closest('.rap-section');
+	const nextSection = document.querySelector('#certificate');
+
+	thisSection.classList.toggle('show');
+	nextSection.classList.toggle('show');
+}
+
+certificateBtn.addEventListener("click", toCertificate);
 certificateBtn.addEventListener("click", customizeCertificate);
+certificateBtn.addEventListener("click", setUp);
+
+
+
+function setUp() {
+	const dogString = document.querySelector("inserted-dog-name");
+	const userString = document.querySelector("inserted-user-name");
+	const writtenDogName = document.createTextNode(dogName);
+	const writtenUserName = document.createTextNode(userName);
+	document.dogString.appendChild(writtenDogName);
+}
+

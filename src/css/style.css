@@ -328,6 +328,7 @@ body {
 		flex-direction: column;
 		align-items: center;
 		position: relative;
+		margin-top: -8em;
 
 
 		&::before {
@@ -402,6 +403,27 @@ body {
 		max-width: 20ch;
 		text-align: center;
 		vertical-align: middle;
+	}
+
+	#inserted-dog-name {
+		border: solid red 5px;
+		position: absolute;
+		left: 47%;
+		top: 62%;
+	}
+
+	#inserted-user-name {
+		border: solid red 5px;
+		position: absolute;
+		left: 47%;
+		top: 56%;
+	}
+
+	#current-date {
+		border: solid red 5px;
+		position: absolute;
+		left: 61%;
+		top: 72%;
 	}
 }
 
